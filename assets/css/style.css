@@ -13,3 +13,7 @@ h1 {
 h4 {
     color: white;
 }
+
+#train-table {
+    text-align: center;
+}
