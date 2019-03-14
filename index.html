@@ -1,21 +1,109 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>
-        Firebase Project
-    </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Train Timer</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+
+  <!--Scale to Screen-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--Link to CSS-->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Moment JS Reference -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 </head>
+
 <body>
 
-    <h1>Firebase Project</h1>
-    
+  <!-- Train Time Tracker -->
+  <div class="container">
+
+    <!-- Jumbotron -->
+    <div class="jumbotron" id="jumbotron">
+      <h1 class="text-center">Train Timer</h1>
+      <h4 class="text-center">All aboard the Train Timer!</h4>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Current Trains-->
+        <div class="card mb-4">
+          <div class="card-header">Current Train Schedule</div>
+          <div class="card-body">
+            <table class="table table-sm table-hover" id="train-table">
+              <thead>
+                <tr>
+                  <th scope="col">Train Name</th>
+                  <th scope="col">Destination</th>
+                  <th scope="col">Frequency (min)</th>
+                  <th scope="col">Next Arrival</th>
+                  <th scope="col">Minutes Away</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Add Train  -->
+        <div class="card mb-4">
+          <div class="card-header">Add Train</div>
+          <div class="card-body">
+
+            <!-- Entry Form -->
+            <form>
+              <div class="form-group">
+                <label for="train-name-input">Train Name</label>
+                <input class="form-control" id="train-name-input" placeholder="The Little Red Caboose" type="text">
+              </div>
+              <div class="form-group">
+                <label for="destination-input">Destination</label>
+                <input class="form-control" id="destination-input" placeholder="Gum Drop Land" type="text">
+              </div>
+              <div class="form-group">
+                <label for="start-input">First Train Time (HH:mm - military time)</label>
+                <input class="form-control" id="time" placeholder="--:--" type="text">
+              </div>
+              <div class="form-group">
+                <label for="rate-input">Frequency (min)</label>
+                <input class="form-control" id="frequency" placeholder="30" type="text">
+              </div>
+              <button class="btn btn-light float-left" id="submit-btn">Submit</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!--app.js -->
+  <script src="assets/javascript/app.js"></script>
+
+
+
 </body>
+
 </html>

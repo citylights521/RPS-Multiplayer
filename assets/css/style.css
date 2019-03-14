@@ -1,0 +1,15 @@
+/* CSS */
+
+.jumbotron {
+background: url(../images/train.jpg) center center / cover no-repeat;
+
+}
+ 
+h1 {
+    font-size: 100px;
+    color: white;
+}
+
+h4 {
+    color: white;
+}
